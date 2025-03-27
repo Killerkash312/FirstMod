@@ -11,8 +11,8 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, FirstMod.MOD_ID);
 
-    public static final RegistryObject<Item> GARNET = ITEMS.register("garnet", () -> new Item(new Item.Properties().setId(ITEMS.key("garnet"))));
-    public  static  final RegistryObject<Item> RAW_GARNET = ITEMS.register("raw_garnet", () -> new Item(new Item.Properties().setId(ITEMS.key("raw_garnet"))));
+    public static final RegistryObject<Item> GARNET = ITEMS.register("garnet", () -> new Item(new Item.Properties()));
+    public  static  final RegistryObject<Item> RAW_GARNET = ITEMS.register("raw_garnet", () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

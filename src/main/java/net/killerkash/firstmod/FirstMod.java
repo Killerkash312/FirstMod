@@ -1,6 +1,7 @@
 package net.killerkash.firstmod;
 
 import com.mojang.logging.LogUtils;
+import net.killerkash.firstmod.block.ModBlocks;
 import net.killerkash.firstmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -33,6 +34,7 @@ public class FirstMod {
 
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register the item to a creative tab
@@ -50,6 +52,10 @@ public class FirstMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.GARNET);
             event.accept(ModItems.RAW_GARNET);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.GARNET_BLOCK);
+            event.accept(ModBlocks.GARNET_ORE);
         }
     }
 
